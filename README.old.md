@@ -1,2 +1,0 @@
-# gooflix
-Movie Discovery App.
