@@ -39,7 +39,6 @@ const SLink = styled(Link)`
   justify-content: center;
 `;
 
-
 const HeaderC = ({location : {pathname}}) => (
   <Header>
     <List>
