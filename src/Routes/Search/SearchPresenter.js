@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import Message from "Components/Message";
 import Loader from "Components/Loader";
 import Section from "Components/Section";
 
@@ -53,6 +54,13 @@ const SearchPresenter = ({
             ))}
           </Section>
         )}
+        {error && <Message text={error} color="#e74c3c"/>}
+        { tvResults && 
+          movieResults && 
+          tvResults.length === 0 && 
+          movieResults.length === 0 && 
+          (<Message text="Noting Results" color="#95a5a6"/>)
+        }
       </>
     )}
 </Container>);

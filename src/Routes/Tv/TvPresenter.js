@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import Message from "Components/Message";
 import Section from "Components/Section"
 import Loader from "Components/Loader";
 
@@ -31,6 +32,7 @@ const TvPresenter = ({
         {airingToday.map(v => v.name)}
       </Section>
     )}
+    {error && <Message text={error} color="#e74c3c"/>}
   </Container>
 );
 

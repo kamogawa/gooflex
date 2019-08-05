@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import Message from "Components/Message";
 import Section from "Components/Section"
 import Loader from "Components/Loader";
 
@@ -26,6 +27,7 @@ loading ? <Loader /> : (
         {popular.map( v => <span key={v.id}>{v.title}</span> )}
       </Section>
     )}
+    {error && <Message text={error} color="#e74c3c"/>}
   </Container>
 );
 
