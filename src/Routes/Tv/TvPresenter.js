@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Message from "Components/Message";
 import Section from "Components/Section"
 import Loader from "Components/Loader";
+import Poster from "Components/Poster";
 
 const Container = styled.div`
   padding: 0px 20px;
@@ -19,17 +20,44 @@ const TvPresenter = ({
   <Container>
     {topRated && topRated.length > 0 && (
       <Section title="Top Rated Shows">
-        {topRated.map(v => v.name)}
+        {topRated.map(v =>           
+          <Poster 
+            key={v.id}
+            id={v.id}
+            imageUrl={v.poster_path}
+            title={v.original_name}
+            rating={v.vote_average}
+            year={v.first_air_date.substring(0, 4)}
+          /> 
+        )}
       </Section>
     )}
     {popular && popular.length > 0 && (
       <Section title="Popular Shows">
-        {popular.map(v => v.name)}
+        {popular.map(v =>           
+          <Poster 
+            key={v.id}
+            id={v.id}
+            imageUrl={v.poster_path}
+            title={v.original_name}
+            rating={v.vote_average}
+            year={v.first_air_date.substring(0, 4)}
+          /> 
+        )}
       </Section>
     )}
     {airingToday && airingToday.length > 0 && (
       <Section title="Popular Shows">
-        {airingToday.map(v => v.name)}
+        {airingToday.map(v =>            
+          <Poster 
+            key={v.id}
+            id={v.id}
+            imageUrl={v.poster_path}
+            title={v.original_name}
+            rating={v.vote_average}
+            year={v.first_air_date.substring(0, 4)}
+          /> 
+        )}
       </Section>
     )}
     {error && <Message text={error} color="#e74c3c"/>}
