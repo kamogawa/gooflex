@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import Helmet from "react-helmet";
 import Message from "Components/Message";
 import Section from "Components/Section"
 import Loader from "Components/Loader";
@@ -10,8 +11,12 @@ const Container = styled.div`
   padding: 20px;
 `;
 
-const HomePresenter = ({nowPlaying, upcoming, popular, error, loading}) => 
-loading ? <Loader /> : (
+const HomePresenter = ({nowPlaying, upcoming, popular, error, loading}) =>
+<> 
+<Helmet>
+  <title>Movies | Gooflix</title>
+</Helmet>
+{loading ? <Loader /> : (
   <Container>
     {nowPlaying && nowPlaying.length > 0 && (
       <Section title="Now Playing">
@@ -60,7 +65,8 @@ loading ? <Loader /> : (
     )}
     {error && <Message text={error} color="#e74c3c"/>}
   </Container>
-);
+)};
+</>
 
 HomePresenter.propTypes = {
   nowPlaying: PropTypes.array,

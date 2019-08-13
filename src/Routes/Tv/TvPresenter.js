@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import Helmet from "react-helmet";
 import Message from "Components/Message";
 import Section from "Components/Section"
 import Loader from "Components/Loader";
 import Poster from "Components/Poster";
 
 const Container = styled.div`
-  padding: 0px 20px;
+  padding: 20px;
 `;
 
 const TvPresenter = ({
@@ -16,7 +17,11 @@ const TvPresenter = ({
   airingToday, 
   error,
   loading
-}) => loading ? <Loader /> : (
+}) => <>
+<Helmet>
+  <title>TV Show | Gooflix</title>
+</Helmet>
+{loading ? <Loader /> : (
   <Container>
     {topRated && topRated.length > 0 && (
       <Section title="Top Rated Shows">
@@ -61,8 +66,9 @@ const TvPresenter = ({
       </Section>
     )}
     {error && <Message text={error} color="#e74c3c"/>}
-  </Container>
-);
+    </Container>
+)};
+</>
 
 TvPresenter.propTypes = {
   topRated: PropTypes.array,

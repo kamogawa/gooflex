@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import Helmet from "react-helmet";
 import Message from "Components/Message";
 import Loader from "Components/Loader";
 import Section from "Components/Section";
@@ -29,7 +30,12 @@ const SearchPresenter = ({
   loading, 
   handleSubmit,
   updateTerm
-}) => (<Container>
+}) => 
+<>
+<Helmet>
+  <title>Search | Gooflix</title>
+</Helmet>
+{(<Container>
   <Form onSubmit={handleSubmit}>
     <Input
       placeholder="Search Movies or TV Shows..."
@@ -79,7 +85,8 @@ const SearchPresenter = ({
         }
       </>
     )}
-</Container>);
+</Container>)};
+</>
 
 SearchPresenter.propTypes = {
   movieResults: PropTypes.array,
