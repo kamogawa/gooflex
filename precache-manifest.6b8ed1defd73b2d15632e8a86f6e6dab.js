@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "94f94a11a047bb555ad964994547a035",
+    "revision": "55341fd6aeb452fb576d200131625909",
     "url": "/gooflix/index.html"
   },
   {
-    "revision": "4a2f4b3d828882c99b7e",
-    "url": "/gooflix/static/js/2.d7e6b97f.chunk.js"
+    "revision": "16d17b9b2856ffaa3e7d",
+    "url": "/gooflix/static/js/2.d6a96ddf.chunk.js"
   },
   {
-    "revision": "7cdc11dcc3b2dc8134c8",
-    "url": "/gooflix/static/js/main.d70d2732.chunk.js"
+    "revision": "b723a4ca935f2755656a",
+    "url": "/gooflix/static/js/main.46af4150.chunk.js"
   },
   {
     "revision": "23b0fe774fad6c05588c",
