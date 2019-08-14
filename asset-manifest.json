@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.js": "/gooflix/static/js/main.d70d2732.chunk.js",
+    "main.js.map": "/gooflix/static/js/main.d70d2732.chunk.js.map",
+    "runtime~main.js": "/gooflix/static/js/runtime~main.4192c076.js",
+    "runtime~main.js.map": "/gooflix/static/js/runtime~main.4192c076.js.map",
+    "static/js/2.d7e6b97f.chunk.js": "/gooflix/static/js/2.d7e6b97f.chunk.js",
+    "static/js/2.d7e6b97f.chunk.js.map": "/gooflix/static/js/2.d7e6b97f.chunk.js.map",
+    "index.html": "/gooflix/index.html",
+    "precache-manifest.fd0c1257840b04f70733e67ebec169e5.js": "/gooflix/precache-manifest.fd0c1257840b04f70733e67ebec169e5.js",
+    "service-worker.js": "/gooflix/service-worker.js",
+    "static/media/noPosterSmall.png": "/gooflix/static/media/noPosterSmall.87a0eb6a.png"
+  }
+}
