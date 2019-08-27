@@ -37,9 +37,12 @@ const Content = styled.div`
 
 const Cover = styled.div`
   width: 30%;
-  background-image: url(${props => props.bgImage});
-  background-position: center center;
+  height: 100%;
+`;
+
+const CoverImage = styled.img`
   background-size: cover;
+  width: 100%;
   height: 100%;
   border-radius: 5px;
 `;
@@ -72,6 +75,17 @@ const Overview = styled.p`
   width: 50%;
 `;
 
+const Imdb = styled.a`
+`;
+
+const Image = styled.img`
+  position: absolute;
+  background-image: url(${props => props.bgUrl});
+  height: 15px;
+  width: 30px;
+  background-size: cover;
+  border-radius: 4px;
+`;
 
 const DetailPresenter = ({result, error, loading}) => (
   loading 
@@ -95,7 +109,9 @@ const DetailPresenter = ({result, error, loading}) => (
     </Helmet>
     <Backdrop bgImage={`https://image.tmdb.org/t/p/original${result.backdrop_path}`}/>
     <Content>
-      <Cover bgImage={ result.poster_path ? `https://image.tmdb.org/t/p/original${result.poster_path}`: require("../../assets/noPosterSmall.png")} />
+      <Cover>
+        <CoverImage src={ result.poster_path ? `https://image.tmdb.org/t/p/original${result.poster_path}`: require("../../assets/noPosterSmall.png")} />
+      </Cover>
       <Data>
         <Title>
           {result.original_title 
@@ -127,6 +143,14 @@ const DetailPresenter = ({result, error, loading}) => (
               ? v.name
               : `${v.name}/`
             )}
+          </Item>
+          <Divider>
+             ・
+          </Divider>
+          <Item>
+            <Imdb href={`https://www.imdb.com/title/tt0110413`}>
+                <Image bgUrl={require("../../assets/imdb.png")}/>
+            </Imdb>
           </Item>
         </ItemContainer>
         <Overview>{result.overview}</Overview>
