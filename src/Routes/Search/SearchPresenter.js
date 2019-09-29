@@ -85,7 +85,7 @@ const SearchPresenter = ({
         }
       </>
     )}
-</Container>)};
+</Container>)}
 </>
 
 SearchPresenter.propTypes = {
